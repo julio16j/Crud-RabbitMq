@@ -52,10 +52,10 @@ public class RabbitConfig {
 				.deadLetterRoutingKey(QueueDefinition.DLQ_BINDING_KEY.getName())
 	            .build();
 		Binding binding = new Binding(
-		        QueueDefinition.DLQ_QUEUE.getName(),
+		        QueueDefinition.SECOND_QUEUE.getName(),
 		        Binding.DestinationType.QUEUE,
-		        QueueDefinition.DLQ_EXCHANGE.getName(),
-		        QueueDefinition.DLQ_BINDING_KEY.getName(),
+		        QueueDefinition.DIRECT_EXCHANGE.getName(),
+		        QueueDefinition.SECOND_BINDING_KEY.getName(),
 		        null);
        rabbitAdmin.declareQueue(queue);
        rabbitAdmin.declareBinding(binding);

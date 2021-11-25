@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootApplication
-public class ProjetoRabbitMqApplication {
+public class ConsumerRabbitMqApplication {
 	
 	@Bean
     public MessageConverter messageConverter ( ObjectMapper objectMapper) {
@@ -17,7 +17,7 @@ public class ProjetoRabbitMqApplication {
     }
 	
 	public static void main(String[] args) throws InterruptedException {
-		SpringApplication.run(ProjetoRabbitMqApplication.class, args);
+		SpringApplication.run(ConsumerRabbitMqApplication.class, args);
 	}
 
 }
